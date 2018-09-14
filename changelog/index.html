@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Soleil - Weather app made simple</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soleil | Changelog</title>
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="/css/common.css">
         <style media="screen">
@@ -14,19 +13,30 @@
         body {
             font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'SF UI Display', 'SF UI Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
             color: #000;
-            /* color: #FFF; */
             padding: 0;
             margin: 0;
         }
         </style>
+        <script type="text/javascript">
+        var typeTextIntoElement = function (text, elem) {
+            elem.innerHTML = '';
+            text.split('').map(function (char, index) {
+                window.setTimeout(function () {
+                    elem.innerHTML += char.replace('\n', '<br />');
+                }, 20*(index-((text.slice(0, index).match(/\s/g) === null) ? 0 : text.slice(0, index).match(/\s/g).length)));
+            });
+        };
+        </script>
     </head>
     <body data-scrolled-over-section1="false">
-        <!-- <div class="HMW-navbar" id="navbar"> -->
-            <!-- <div class="container">
+        <div class="HMW-navbar" id="navbar">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-12 col-xs-12">
-                        <div class="navbar-left">
-                            <span id="navbar-website-title">Soleil</span>
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-xs-12">
+                        <div class="text-center">
+                            <a href="/" style="color: inherit; text-decoration: none;">
+                                <span id="navbar-website-title">Soleil</span>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
@@ -37,23 +47,8 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-            <!-- <script type="text/javascript">
-            if (window.screen.width < 1280) {
-                document.getElementById('navbar-download-button-container').remove();
-            };
-            window.addEventListener('load', function () {
-                window.addEventListener('scroll', function () {
-                    // Determine the border-bottom of NavBar
-                    if (window.pageYOffset > document.querySelector('#HMW-section-01').offsetHeight - 60) {
-                        document.body.setAttribute('data-scrolled-over-section1', true);
-                    } else {
-                        document.body.setAttribute('data-scrolled-over-section1', false);
-                    };
-                });
-            });
-            </script> -->
-        <!-- </div> -->
+            </div>
+        </div>
         <div class="HMW-sections">
             <style media="screen">
             .HMW-sections {
@@ -65,8 +60,17 @@
             h1 ~ h3 {
                 margin-top: 10px;
             }
-            h2:first-child {
-                padding-top: 100px;
+            h2 {
+                margin-top: 20px;
+            }
+            h2 ~ p {
+                margin-top: 30px;
+            }
+            section p, section ul li {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.5em;
+                margin: 20px 0;
             }
             @media screen and (min-width: 768px) {
                 h1 {
@@ -109,76 +113,62 @@
                 <style media="screen">
                 #HMW-section-01 {
                     background: #FFFFFF;
-                    background-image: linear-gradient(-180deg, #FFE7E2 0%, #FDF1E3 50%);
-                    padding: 50px 0 80px;
-
-                    /* Snowy: */
-                    background-image: linear-gradient(-180deg, #C1CEE0 0%, #DAE1E8 40%);
-
-                    /* base: */
-                    /* background-image: linear-gradient(-180deg, #455464 0%, #738393 50%); */
+                    padding: 150px 0 80px;
                 }
-                #HMW-section-01 aside {
-                    font-size: 14px;
-                    line-height: 20px;
-                    color: rgba(0, 0, 0, 0.5);
-                    padding-top: 30px;
+                #HMW-section-01 .article {
+                    padding-top: 60px;
+                }
+                #HMW-section-01 .article section {
+                    padding: 30px 0;
+                }
+                #HMW-section-01 date {
+                    font-weight: 600;
+                    line-height: 1.5em;
+                    height: 1.5em;
+                    display: block;
+                }
+                #HMW-section-01 date ~ div p {
+                    margin: 0 0 0.5em;
                 }
                 </style>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
                             <div class="">
                                 <!-- Title Group -->
-                                <h1>Soleil</h1>
-                                <h3 id="title-h3" style="height: auto;">Weather app made simple.</h3>
-                                <script type="text/javascript">
-                                window.addEventListener('load', function () {
-                                    [
-                                        'No more feature\nThan a weather app must have',
-                                        'Today’s temperatures\nIn comparison with yesterday’s',
-                                        'The simple weather app\n'
-                                    ].map(function (sentence, order, arr) {
-                                        console.log(arr);
-                                        window.setTimeout(function () {
-                                            window.setInterval(function () {
-                                                typeTextIntoElement(sentence, document.getElementById('title-h3'));
-                                            }, arr.length * 4000);
-                                        }, order * 4000);
-                                    });
-                                });
-                                </script>
+                                <h1>Soleil - Changelog</h1>
                             </div>
                             <div class="">
-                                <!-- Images -->
-                                <img src="/img/phones-soleil.png" alt="" style="display: block; width: 80vw; max-width: 500px; margin: 60px auto;">
-                            </div>
-                            <div class="">
-                                <!-- Button Etc -->
-                                <a class="btn btn-lg NBTN-soleil" style="display: block; width: 260px; margin: 0 auto;">Free on App Store</a>
-                            </div>
-                            <div class="">
-                                <!-- Footnotes -->
-                                <aside class="text-center">
-                                    Version 1.0.0. Build 143EB5F3. Requires iOS 10 or higher.
-                                    <br />
-                                    Designed for iPhone and iPod touch.
-                                    <!-- In-App Purchase available. -->
-                                </aside>
+                                <!-- Paragraphs -->
+                                <div class="article">
+                                    <section>
+                                        <h3>2018</h3>
+                                        <ul>
+                                            <li>
+                                                <date>2018-09-14</date>
+                                                <div>
+                                                    <p>Launched Soleil website.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- <div class="" id="HMW-section-02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+                            <h2>Today’s temperatures<br />In comparison with yesterday’s</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div class="" id="footer">
                 <style media="screen">
-                #footer {
-                    color: #000;
-                }
-                #footer .row > div {
-                    margin-bottom: 20px;
-                }
                 #footer ul li {
                     display: inline-block;
                     padding: 0;
