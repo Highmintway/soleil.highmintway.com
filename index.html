@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Highmintway Studio | Soleil - The simple weather app</title>
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <style media="screen">
+        * {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'SF UI Display', 'SF UI Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            color: #000;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+    </head>
+    <body data-scrolled-over-section1="false">
+        <div class="HMW-navbar" id="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-12 col-xs-12">
+                        <div class="navbar-left">
+                            <span id="navbar-website-title">Highmintway Studio</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                        <div class="navbar-right">
+                            <div id="navbar-download-button-container" style="height: 60px; padding-top: 7px;">
+                                <a class="btn btn-md NBTN-soleil" style="display: block; float: right; width: 200px; margin: 0 auto;">Free on App Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            if (window.screen.width < 1280) {
+                document.getElementById('navbar-download-button-container').remove();
+            };
+            window.addEventListener('load', function () {
+                window.addEventListener('scroll', function () {
+                    // Determine the border-bottom of NavBar
+                    if (window.pageYOffset > document.querySelector('#HMW-section-01').offsetHeight - 60) {
+                        document.body.setAttribute('data-scrolled-over-section1', true);
+                    } else {
+                        document.body.setAttribute('data-scrolled-over-section1', false);
+                    };
+                });
+            });
+            </script>
+        </div>
+        <div class="HMW-sections">
+            <style media="screen">
+            .HMW-sections {
+            }
+            h1, h2, h3 {
+                text-align: center;
+                margin: 0;
+            }
+            h1 ~ h3 {
+                margin-top: 10px;
+            }
+            h2:first-child {
+                padding-top: 100px;
+            }
+            @media screen and (min-width: 768px) {
+                h1 {
+                    font-size: 60px;
+                    font-weight: 200;
+                    line-height: 60px;
+                }
+                h2 {
+                    font-size: 40px;
+                    font-weight: 300;
+                    line-height: 60px;
+                }
+                h3 {
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 40px;
+                }
+            }
+            @media screen and (max-width: 767px) {
+                h1 {
+                    font-size: 40px;
+                    font-weight: 200;
+                    line-height: 40px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+                h2 {
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 40px;
+                }
+                h3 {
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 27px;
+                }
+            }
+            </style>
+            <div class="" id="HMW-section-01">
+                <style media="screen">
+                #HMW-section-01 {
+                    background: #FFFFFF;
+                    background-image: linear-gradient(-180deg, #FFE7E2 0%, #FDF1E3 50%);
+                    padding: 150px 0 80px;
+                }
+                #HMW-section-01 aside {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: rgba(0, 0, 0, 0.5);
+                    padding-top: 30px;
+                }
+                </style>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="">
+                                <!-- Title Group -->
+                                <h1>Soleil</h1>
+                                <h3 id="title-h3" style="height: 80px;">The simple weather app</h3>
+                                <script type="text/javascript">
+                                window.addEventListener('load', function () {
+                                    [
+                                        'No more feature\nThan a weather app must have',
+                                        'Today’s temperatures\nIn comparison with yesterday’s',
+                                        'The simple weather app\n'
+                                    ].map(function (sentence, order, arr) {
+                                        console.log(arr);
+                                        window.setTimeout(function () {
+                                            window.setInterval(function () {
+                                                typeTextIntoElement(sentence, document.getElementById('title-h3'));
+                                            }, arr.length * 4000);
+                                        }, order * 4000);
+                                    });
+                                });
+                                </script>
+                            </div>
+                            <div class="">
+                                <!-- Images -->
+                                <img src="/img/phones-soleil.png" alt="" style="display: block; width: 70vw; max-width: 720px; margin: 60px auto;">
+                            </div>
+                            <div class="">
+                                <!-- Button Etc -->
+                                <a class="btn btn-lg NBTN-soleil" style="display: block; width: 260px; margin: 0 auto;">Free on App Store</a>
+                            </div>
+                            <div class="">
+                                <!-- Footnotes -->
+                                <aside class="text-center">
+                                    Version 1.0.0. Build 143EB5F3. Requires iOS 10 or higher.
+                                    <br />
+                                    Designed for iPhone and iPod touch. In-App Purchase available.
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="" id="footer">
+                <style media="screen">
+                #footer ul li {
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0;
+                }
+                #footer ul li:not(:last-child) {
+                    margin-right: 10px;
+                }
+                </style>
+                <div class="container">
+                    <div class="row" style="padding-top: 80px; padding-bottom: 80px;">
+                        <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 col-xs-12">
+                            &copy; 2018 Highmintway Studio
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <ul class="text-right" style="display: block; padding: 0; margin: 0;">
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="mailto:n@highmintway.com">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

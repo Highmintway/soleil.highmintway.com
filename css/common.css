@@ -1,0 +1,48 @@
+/* NavBar */
+
+/* NavBar */
+#navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+body[data-scrolled-over-section1="true"] #navbar {
+    background: #FFF;
+    position: fixed;
+    position: absolute;
+}
+body[data-scrolled-over-section1="false"] #navbar {
+    position: absolute;
+}
+body[data-scrolled-over-section1="true"] #navbar-download-button-container {
+    opacity: 1;
+}
+body[data-scrolled-over-section1="false"] #navbar-download-button-container {
+    opacity: 0;
+}
+#navbar-website-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 60px;
+    height: 60px;
+}
+#navbar-download-button-container {
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+/* Buttons */
+
+.NBTN-soleil {
+    color: #FFF !important;
+    background-image: linear-gradient(-135deg, #FF754F 0%, #FF9959 100%) !important;
+    border: 5px solid #FECBB1 !important;
+    border-radius: 1000px !important;
+}
+.NBTN-soleil:active {
+    color: #FFF !important;
+    -webkit-filter: contrast(92%);
+}

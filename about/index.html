@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Highmintway Studio | About</title>
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <style media="screen">
+        * {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'SF UI Display', 'SF UI Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            color: #000;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <script type="text/javascript">
+        var typeTextIntoElement = function (text, elem) {
+            elem.innerHTML = '';
+            text.split('').map(function (char, index) {
+                window.setTimeout(function () {
+                    elem.innerHTML += char.replace('\n', '<br />');
+                }, 20*(index-((text.slice(0, index).match(/\s/g) === null) ? 0 : text.slice(0, index).match(/\s/g).length)));
+            });
+        };
+        </script>
+    </head>
+    <body data-scrolled-over-section1="false">
+        <div class="HMW-navbar" id="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-12 col-xs-12">
+                        <div class="navbar-left">
+                            <span id="navbar-website-title">Highmintway Studio</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                        <div class="navbar-right">
+                            <div id="navbar-download-button-container" style="height: 60px; padding-top: 7px;">
+                                <a class="btn btn-md NBTN-soleil" style="display: block; float: right; width: 200px; margin: 0 auto;">Free on App Store</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="HMW-sections">
+            <style media="screen">
+            .HMW-sections {
+            }
+            h1, h2, h3 {
+                text-align: center;
+                margin: 0;
+            }
+            h1 ~ h3 {
+                margin-top: 10px;
+            }
+            h2 {
+                margin-top: 20px;
+            }
+            h2 ~ p {
+                margin-top: 30px;
+            }
+            section p, section ul li {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.5em;
+                margin: 20px 0;
+            }
+            @media screen and (min-width: 768px) {
+                h1 {
+                    font-size: 60px;
+                    font-weight: 200;
+                    line-height: 60px;
+                }
+                h2 {
+                    font-size: 40px;
+                    font-weight: 300;
+                    line-height: 60px;
+                }
+                h3 {
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 40px;
+                }
+            }
+            @media screen and (max-width: 767px) {
+                h1 {
+                    font-size: 40px;
+                    font-weight: 200;
+                    line-height: 40px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+                h2 {
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 40px;
+                }
+                h3 {
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 27px;
+                }
+            }
+            </style>
+            <div class="" id="HMW-section-01">
+                <style media="screen">
+                #HMW-section-01 {
+                    background: #FFFFFF;
+                    padding: 150px 0 80px;
+                }
+                #HMW-section-01 .article {
+                    padding-top: 60px;
+                }
+                #HMW-section-01 .article section {
+                    padding: 30px 0;
+                }
+                </style>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+                            <div class="">
+                                <!-- Title Group -->
+                                <h1>About Highmintway Studio</h1>
+                            </div>
+                            <div class="">
+                                <!-- Paragraphs -->
+                                <div class="article">
+                                    <section>
+                                        <h2>Philosophy</h2>
+                                        <p>We believe in the combination of simplicity and efficiency. We develop apps and services which empahsize the essential and abolish the unnecessary.</p>
+                                    </section>
+                                    <section>
+                                        <h2>Operation</h2>
+                                        <p>Highmintway Studio consists of a few members and operates totally online. Our partners help us dsitribute our apps and pay taxes.</p>
+                                    </section>
+                                    <section>
+                                        <h2>History</h2>
+                                        <h3>2018</h3>
+                                        <ul>
+                                            <li>Published Soleil.</li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="" id="HMW-section-02">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+                            <h2>Today’s temperatures<br />In comparison with yesterday’s</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="" id="footer">
+                <style media="screen">
+                #footer ul li {
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0;
+                }
+                #footer ul li:not(:last-child) {
+                    margin-right: 10px;
+                }
+                </style>
+                <div class="container">
+                    <div class="row" style="padding-top: 80px; padding-bottom: 80px;">
+                        <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 col-xs-12">
+                            &copy; 2018 Highmintway Studio
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <ul class="text-right" style="display: block; padding: 0; margin: 0;">
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="mailto:n@highmintway.com">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
