@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Highmintway Studio | Soleil - The simple weather app</title>
+        <title>Soleil - Weather app made simple</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="/css/common.css">
         <style media="screen">
@@ -13,18 +14,19 @@
         body {
             font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'SF UI Display', 'SF UI Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
             color: #000;
+            color: #FFF;
             padding: 0;
             margin: 0;
         }
         </style>
     </head>
     <body data-scrolled-over-section1="false">
-        <div class="HMW-navbar" id="navbar">
-            <div class="container">
+        <!-- <div class="HMW-navbar" id="navbar"> -->
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-12 col-xs-12">
                         <div class="navbar-left">
-                            <span id="navbar-website-title">Highmintway Studio</span>
+                            <span id="navbar-website-title">Soleil</span>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
@@ -35,8 +37,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <script type="text/javascript">
+            </div> -->
+            <!-- <script type="text/javascript">
             if (window.screen.width < 1280) {
                 document.getElementById('navbar-download-button-container').remove();
             };
@@ -50,8 +52,8 @@
                     };
                 });
             });
-            </script>
-        </div>
+            </script> -->
+        <!-- </div> -->
         <div class="HMW-sections">
             <style media="screen">
             .HMW-sections {
@@ -108,7 +110,15 @@
                 #HMW-section-01 {
                     background: #FFFFFF;
                     background-image: linear-gradient(-180deg, #FFE7E2 0%, #FDF1E3 50%);
-                    padding: 150px 0 80px;
+                    padding: 50px 0 80px;
+
+                    /* Snowy: */
+                    background-image: linear-gradient(-180deg, #C1CEE0 0%, #DAE1E8 40%);
+
+                    /* base: */
+                    /* background: #28384A; */
+                    /* background-image: linear-gradient(-180deg, #F2F1EE 2%, #C4C4C4 89%); */
+                    background-image: linear-gradient(-180deg, #455464 0%, #738393 50%);
                 }
                 #HMW-section-01 aside {
                     font-size: 14px;
@@ -123,7 +133,7 @@
                             <div class="">
                                 <!-- Title Group -->
                                 <h1>Soleil</h1>
-                                <h3 id="title-h3" style="height: 80px;">The simple weather app</h3>
+                                <h3 id="title-h3" style="height: auto;">Weather app made simple.</h3>
                                 <script type="text/javascript">
                                 window.addEventListener('load', function () {
                                     [
@@ -143,7 +153,7 @@
                             </div>
                             <div class="">
                                 <!-- Images -->
-                                <img src="/img/phones-soleil.png" alt="" style="display: block; width: 70vw; max-width: 720px; margin: 60px auto;">
+                                <img src="/img/phones-soleil.png" alt="" style="display: block; width: 80vw; max-width: 500px; margin: 60px auto;">
                             </div>
                             <div class="">
                                 <!-- Button Etc -->
@@ -154,7 +164,8 @@
                                 <aside class="text-center">
                                     Version 1.0.0. Build 143EB5F3. Requires iOS 10 or higher.
                                     <br />
-                                    Designed for iPhone and iPod touch. In-App Purchase available.
+                                    Designed for iPhone and iPod touch.
+                                    <!-- In-App Purchase available. -->
                                 </aside>
                             </div>
                         </div>
@@ -164,6 +175,12 @@
 
             <div class="" id="footer">
                 <style media="screen">
+                #footer {
+                    color: #000;
+                }
+                #footer .row > div {
+                    margin-bottom: 20px;
+                }
                 #footer ul li {
                     display: inline-block;
                     padding: 0;
@@ -172,16 +189,41 @@
                 #footer ul li:not(:last-child) {
                     margin-right: 10px;
                 }
+                @media screen and (min-width: 576px) {
+                    .mobile-only { display: none; }
+                }
+                @media screen and (max-width: 575px) {
+                    .desktop-only { display: none; }
+                }
                 </style>
-                <div class="container">
+                <div class="container desktop-only">
                     <div class="row" style="padding-top: 80px; padding-bottom: 80px;">
                         <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 col-xs-12">
-                            &copy; 2018 Highmintway Studio
+                            <div class="">
+                                &copy; 2018 J.N. (a.k.a. Neruthes) &amp; Chino Chang
+                            </div>
                         </div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                             <ul class="text-right" style="display: block; padding: 0; margin: 0;">
                                 <li><a href="/about/">About</a></li>
                                 <li><a href="mailto:n@highmintway.com">Contact</a></li>
+                                <li><a href="/changelog/">Changelog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mobile-only">
+                    <div class="row" style="padding-top: 80px; padding-bottom: 80px;">
+                        <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 col-xs-12">
+                            <div class="text-center">
+                                &copy; 2018 J.N. (a.k.a. Neruthes) &amp; Chino Chang
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <ul class="text-center" style="display: block; padding: 0; margin: 0;">
+                                <li><a href="/about/">About</a></li>
+                                <li><a href="mailto:n@highmintway.com">Contact</a></li>
+                                <li><a href="/changelog/">Changelog</a></li>
                             </ul>
                         </div>
                     </div>

@@ -44,5 +44,5 @@ body[data-scrolled-over-section1="false"] #navbar-download-button-container {
 }
 .NBTN-soleil:active {
     color: #FFF !important;
-    -webkit-filter: contrast(92%);
+    -webkit-filter: contrast(80%);
 }
